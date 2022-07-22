@@ -51,180 +51,239 @@ html::-webkit-scrollbar-thumb{
 
 }
 .header .logocontent .logo img{
-    height: 20rem;
+    height: 25rem;
 }
 .header .logocontent .logoname{
     color: var(--black);
     font-size: 2rem;
     font-weight: bolder;
+    
 }
 
 .header .navbar a{
     font-size: 2rem;
-    margin-right: 8rem;
+    margin-right: 5rem;
     color: var(--black);
     font-weight: bold;
     align-items: center;
 }
 .header .navbar a:hover{
-    border-bottom: .1rem solid var(--black);
+    border-bottom: .1rem solid var(--gold);
     padding-bottom: .4rem;
 }
 .header .icon i{
-    font-size: 2rem;
-    margin-right: 8rem;
-    color: var(--black);
-    cursor: pointer;
+  font-size: 2rem;
+  margin-right: 2rem;
+  color: var(--black);
+  cursor: pointer;
 }
-/*Search bar design*/
 
-  
-  #content {
-    position: absolute;
-    height: 10px;
-    width: 10px;
-    margin-left: 500px;
-    top: 64%;
-    left: 65%;
-    transform: translate(-50%, -50%);
+/*design of the search bar section tihahaha*/
+
+.header .search{
+  display: none;
+  top: 100%;
+  margin: 1.5rem 7%;
+  background-color: transparent;
+  width: 50%;
+  right: 0;
+  height: 5rem;
+  position:  absolute;
+
+}
+.header .search input{
+  width: 100%;
+  height: 100%;
+  font-size: 2.2rem;
+  background-color: var(--gold);
+  color: var(--black);
+  margin-right: 7%;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  box-shadow: var(--box-shadow);
+}
+.header .search.active{
+  display: inline-block;
+}
+#menu-bar{
+  display: none;
+}
+/*text section design*/
+.home{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url(../images/img4.jpg);
+  background-size: cover;
+  background-position: center center;
+  font-family: Arial, Helvetica, sans-serif;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow-x: hidden;
+}
+
+
+
+
+
+.container-first {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 110px;
+  color: var(--white);
+  font-family: Abril fatface, sans-serif;
+}
+h1 span {
+  position: relative;
+}
+.container-btns {
+  position: relative;
+  top: 50px;
+}
+.btn-first {
+  border: 2px solid var(--gold);
+  outline: none;
+  background: transparent;
+  font-size: 30px;
+  padding: 20px;
+  width: 300px;
+  color: var(--white);
+  cursor: pointer;
+}
+.btn-first:nth-child(1){
+  margin-right: 30px;
+}
+.btn-first:hover {
+  transition: all 0.3s ease-in-out;
+  background: var(--gold);
+  color: #333;
+}
+
+.medias {
+  list-style-type: none;
+  position: absolute;
+  right: 3.3%;
+  top: 45%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.bulle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  background: #f1f1f1;
+  cursor: pointer;
+  position: relative;
+}
+
+.logo-medias {
+  width: 40px;
+  height: 40px;
+}
+
+/* media queries for responsive pages*/
+
+/*maxxxx*/
+@media (max-width:1464px){
+  html{
+    font-size: 45%;
   }
-  
-  #content.on {
-    -webkit-animation-name: in-out;
-    animation-name: in-out;
-    -webkit-animation-duration: 0.7s;
-    animation-duration: 0.7s;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear;
-    -webkit-animation-iteration-count: 1;
-    animation-iteration-count: 1;
+  .header{
+    padding: 1.3rem 3rem;
   }
-  
-input {
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-    width: 30px;
-    height: 30px;
-    border: 4px solid var(--black);
-    border-radius: 50%;
-    background: none;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 400;
-    font-family: 'Quicksand', sans-serif;
-    outline: 0;
-    -webkit-transition: width 0.4s ease-in-out, border-radius 0.8s ease-in-out,
-      padding 0.2s;
-    transition: width 0.4s ease-in-out, border-radius 0.8s ease-in-out,
-      padding 0.2s;
-    -webkit-transition-delay: 0.4s;
-    transition-delay: 0.4s;
-    -webkit-transform: translate(-100%, -50%);
-    -ms-transform: translate(-100%, -50%);
-    transform: translate(-100%, -50%);
-  }
-  
-.search {
-    background: none;
-    position: absolute;
-    top: -8px;
-    left: 2px;
-    height: 50px;
-    width: 50px;
-    padding: 0;
-    border-radius: 100%;
-    outline: 0;
-    border: 0;
-    color: inherit;
-    cursor: pointer;
-    -webkit-transition: 0.2s ease-in-out;
-    transition: 0.2s ease-in-out;
-    -webkit-transform: translate(-100%, -50%);
-    -ms-transform: translate(-100%, -50%);
-    transform: translate(-100%, -50%);
-  }
-  
-  .search:before {
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 4px;
-    background-color: var(--gold);
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    margin-top: 26px;
-    margin-left: 17px;
-    -webkit-transition: 0.2s ease-in-out;
-    transition: 0.2s ease-in-out;
-  }
-  
-  .close {
-    -webkit-transition: 0.4s ease-in-out;
-    transition: 0.4s ease-in-out;
-    -webkit-transition-delay: 0.4s;
-    transition-delay: 0.4s;
-  }
-  
-  .close:before {
-    content: "";
-    position: absolute;
-    width: 27px;
-    height: 4px;
-    margin-top: -1px;
-    margin-left: -13px;
-    background-color: var(--gold);
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    -webkit-transition: 0.2s ease-in-out;
-    transition: 0.2s ease-in-out;
-  }
-  
-  .close:after {
-    content: "";
-    position: absolute;
-    width: 27px;
-    height: 4px;
-    background-color: var(--gold);
-    margin-top: -1px;
-    margin-left: -13px;
-    cursor: pointer;
-    -webkit-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-  }
-  
-  .square {
-    box-sizing: border-box;
-    padding: 0 20px 0 20px;
-    width: 280px;
-    height: 50px;
-    border: 2.5px solid var(--black);
-    border-radius: 0;
-    background: none;
-    color: var(--black);
-    font-family: 'Quicksand', sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    outline: 0;
-    -webkit-transition: width 0.4s ease-in-out, border-radius 0.4s ease-in-out,
-      padding 0.2s;
-    transition: width 0.4s ease-in-out, border-radius 0.4s ease-in-out,
-      padding 0.2s;
-    -webkit-transition-delay: 0.4s, 0s, 0.4s;
-    transition-delay: 0.4s, 0s, 0.4s;
-    -webkit-transform: translate(-100%, -50%);
-    -ms-transform: translate(-100%, -50%);
-    transform: translate(-100%, -50%);
-  }
-  
+}
+
+/*mediummmm*/
+@media (max-width:1355px){
   #menu-bar{
+    display: inline-block;
+
+  }
+  .header .navbar{
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 25rem;
+    background-color: var(--white);
+    height: 80vh;
+  }
+  .header .navbar.active{
+    right: 0;
+  }
+  .header .navbar a{
+    display: block;
+    font-size: 2rem;
+    color: var(--black);
+    margin: 1.5rem;
+  }
+  h1 {
+    text-transform: uppercase;
+    font-size: 80px;
+    color: var(--white);
+    font-family: Abril fatface, sans-serif;
+  }
+  .btn-first {
+    border: 2px solid var(--gold);
+    outline: none;
+    background: transparent;
+    font-size: 18px;
+    padding: 18px;
+    width: 280px;
+    color: var(--white);
+    cursor: pointer;
+  }
+  .btn-first:nth-child(1){
+    margin-right: 18px;
+  }
+}
+/*smaalll shiiit*/
+@media (max-width:919px){
+  html{
+    font-size: 40%;
+  }
+  h1 {
+    text-transform: uppercase;
+    font-size: 65px;
+    color: var(--white);
+    font-family: Abril fatface, sans-serif;
+  }
+  .btn-first {
+    border: 2px solid var(--gold);
+    outline: none;
+    background: transparent;
+    font-size: 15px;
+    padding: 10px;
+    width: 280px;
+    color: var(--white);
+    cursor: pointer;
     display: none;
   }
-
-
-/* media queries for web responsive*/
-
+  .btn-first:nth-child(1){
+    margin-right: 15px;
+    display: none;
+  }
+}
+@media (max-width:693px){
+  html{
+    font-size: 40%;
+  }
+  h1 {
+    text-transform: uppercase;
+    font-size: 55px;
+    color: var(--white);
+    font-family: Abril fatface, sans-serif;
+  }}
 

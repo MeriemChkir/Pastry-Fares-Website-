@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../CSS/Style.css">
     <!--cdn font awesome css icons link-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
 </head>
 <body>
     <!--header starts-->
@@ -17,24 +18,66 @@
             <a href="#" class="logo"><img src="../images/logo.png" alt=""></a>
             <h1 class="logoname">Patisserie Fares</h1>
         </div>
-    <!--navbar-->
-    <nav class="navbar">
-        <a href="#home">home</a>
-        <a href="#Menu">Menu</a>
-        <a href="#About">About</a>
-        <a href="#Review">Review</a>
-        <a href="#Contact">Contact</a>
-    </nav>
+        <!--navbar-->
+        <nav class="navbar">
+            <a href="#Accueil">Accueil</a>
+            <a href="#Menu">Menu</a>
+            <a href="#About">A propos</a>
+            <a href="#Review">Avis</a>
+            <a href="#Contact">Contact</a>
+        </nav>
 
-    <div class="icon">
-    </div>
-    <!--search bar-->
-    <form id="content">
-        <input type="text" name="input" class="input" id="search-input">
-        <button type="reset" class="search" id="search-btn"></button>
-      </form>
+        <div class="icon">
+            <i class="fas fa-search" id="search"></i>
+            <i class="fa-solid fa-bars-staggered" id="menu-bar"></i>
+        </div>
+
+        <div class="search">
+            <input type="search" placeholder="search...">
+        </div>
 
     </header>
+    <!--Ennnnnnd of the header-->
+
+    <!--Home Section starteeed-->
+
+        <Section class="home" id="home">
+            <div class="homecontent">
+                <div class="home-button">
+                    <a href="#"><button>plus</button></a>
+                </div>
+            </div>
+
+        <!--Text section-->
+        <div class="lignes">
+            <div class="l1"></div>
+            <div class="l2"></div>
+        </div>
+    
+        <div class="container-first">
+            <h1><span>LE </span><span>plaisir </span> <span>de</span> <span>savourer!</span></h1>
+            <div class="container-btns">
+                <button class="btn-first b1">Menu</button>
+                <button class="btn-first b2">A propos de nous</button>
+            </div>
+        </div>
+    
+        
+    
+    
+        <ul class="medias">
+            <li class="bulle"><img src="../images/fb logo.png" class="logo-medias"></li>
+            <li class="bulle"><img src="../images/insta logo.png" class="logo-medias"></li>
+            <li class="bulle"><img src="../images/youtube logo.png" class="logo-medias"></li>
+        </ul>
+    
+    
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+        
+    </Section>
+
+
     
     <!--JavaScript-->
     <script src="../JS/index.js"></script>
