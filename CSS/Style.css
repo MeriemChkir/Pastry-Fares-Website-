@@ -1,9 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@100;200;400;500;600;700;800&family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('compass/css3');
+
 :root{
     --black: #181722;
     --white: #F0F0F0;
     --gold: #BDB76B;
     --box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+    --lgold: #EEE8AA;
+    --lwhite: #FDF5E6;
+    --darkgold:#808000;
+    --SandyBrown:#F4A460;
+
 }
 
 *{
@@ -121,6 +128,7 @@ html::-webkit-scrollbar-thumb{
   background-repeat: no-repeat;
   position: relative;
   overflow-x: hidden;
+
 }
 
 
@@ -135,29 +143,31 @@ html::-webkit-scrollbar-thumb{
 
 h1 {
   text-transform: uppercase;
-  font-size: 110px;
+  font-size: 89px;
   color: var(--white);
   font-family: Abril fatface, sans-serif;
+  margin-right: 10%;
 }
 h1 span {
   position: relative;
 }
 .container-btns {
   position: relative;
-  top: 50px;
+  top: 80px;
+  gap:2rem;
 }
 .btn-first {
   border: 2px solid var(--gold);
   outline: none;
   background: transparent;
   font-size: 30px;
-  padding: 20px;
-  width: 300px;
+  padding: 11px;
+  width: 280px;
   color: var(--white);
   cursor: pointer;
 }
 .btn-first:nth-child(1){
-  margin-right: 30px;
+  margin-right: 20px;
 }
 .btn-first:hover {
   transition: all 0.3s ease-in-out;
@@ -205,52 +215,58 @@ h1 span {
 }
 
 .about .image{
-  flex:1 5 1rem;
+  flex:1 10 5rem;
   opacity: 99%;
+  margin-right: -15%;
 }
 
 .about .image img{
   width: 100%;
+  padding:10rem 5rem;
 }
 
 .about .content{
-  flex:1 1 41rem;
+  flex:1 3 50rem;
+  margin-left: 10%;
+  position: center;
 }
 
 .about .content .title{
   font-size: 4rem;
   color:var(--black);
+  padding:3rem 5rem;
 }
 
 .about .content p{
-  font-size: 1.7rem;
+  font-size: 2rem;
   color:var(--light-black);
-  padding:1rem 0;
-  line-height: 2;
+  padding:3rem 5rem;
+  line-height: 1.5;
 }
 
 .about .content .icons-container{
   display: flex;
   flex-wrap: wrap;
   gap:2rem;
-  margin-top: 3rem;
+  margin-top: 10rem;
 }
 
 .about .content .icons-container .icons{
-  flex:1 1 30rem;
+  flex:1 1 2rem;
   text-align: center;
-  background: var(--light-bg);
-  padding:3rem 2rem;
+  background: var(--lwhite);
+  padding:4rem 5rem;
+  margin-right: 10%;
 }
 
 .about .content .icons-container .icons img{
-  height: 5rem;
+  height: 7rem;
 }
 
 .about .content .icons-container .icons h3{
   padding-top: 5rem;
   font-size: 2rem;
-  color:var(--light-black);
+  color:var(--black);
   font-weight: normal;
 }
 
@@ -261,7 +277,8 @@ h1 span {
   color:var(--gold);
   font-size: 2rem;
   cursor: pointer;
-  padding:1rem 3rem;
+  padding:1.5rem 5rem;
+  margin-left: 3%;
 }
 
 .btn:hover{
@@ -269,26 +286,397 @@ h1 span {
 }
 
 
+/* Gateaux section starts */
+
+
+ /*swiper responsive breakpoints */
+.heading{
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.heading span{
+  font-size: 5rem;
+  color:var(--gold);
+  margin-bottom: -15rem;
+}
+
+.heading h3{
+  font-size: 10rem;
+  color:var(--black);
+  margin-top: 10rem;
+}
+
+
+.Gateaux{
+  background-color: transparent;
+}
+
+.Gateaux .slide{
+  text-align: center;
+  padding:4rem 2rem;
+  border-radius: .5rem;
+  opacity: .5;
+  transform: scale(.9);
+  margin-bottom: 4rem;
+  cursor: pointer;
+  
+}
+
+.swiper-pagination-bullet-active{
+  background: var(--lgold);
+
+}
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+  bottom:0;
+}
+
+.Gateaux .swiper-slide-active{
+  transform: scale(1);
+  opacity: 1;
+  background: var(--white);
+  box-shadow: var(--box-shadow);
+  border:var(--border);
+}
+
+.Gateaux .slide img{
+  height: 25rem;
+  margin-bottom: 1rem;
+}
+
+.Gateaux .slide h3{
+  font-size: 3rem;
+  padding:3rem 0rem;
+  color:var(--black);
+}
+
+.Gateaux .slide .price{
+  font-size: 3rem;
+  color:var(--darkgold);
+}
+
+.Gateaux-preview-container{ 
+  background: var(--black);
+  position: fixed;
+  top:0; left:0;
+  height: 100%;
+  width: 100%;
+  z-index: 1100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.Gateaux-preview-container .Gateaux-preview{
+  text-align: center;
+  background: var(--white);
+  padding:3rem 2rem;
+  border-radius: .5rem;
+  display: none;
+  width: 35rem;
+}
+
+.Gateaux-preview-container .Gateaux-preview.active{
+  display: inline-block;
+  animation:fadeIn 0.4s cubic-bezier(.54,1.3,.63,1.34) backwards;
+}
+
+.Gateaux-preview-container .Gateaux-preview img{
+  height: 25rem;
+  margin-bottom: 1rem;
+}
+
+.Gateaux-preview-container .Gateaux-preview h3{
+  padding:1rem 0;
+  font-size: 2.5rem;
+  color:var(--black);
+}
+
+.Gateaux-preview-container .Gateaux-preview .stars{
+  margin-top: .5rem;
+}
+
+.Gateaux-preview-container .Gateaux-preview .stars i{
+  font-size: 1.7rem;
+  color:var(--lwhite);
+}
+
+.Gateaux-preview-container .Gateaux-preview p{
+  font-size: 1.6rem;
+  color:var(--light-black);
+  padding:1rem 0;
+  line-height: 2;
+}
+
+.Gateaux-preview-container .Gateaux-preview .price{
+  font-size: 50rem;
+  color:var(--black);
+  margin-bottom: .5rem;
+}
+
+/* fast-food section design  */
+
+.heading{
+  text-align: center;
+  margin-bottom: 10rem;
+}
+
+.heading span{
+  font-size: 3.5rem;
+  color:var(--darkgold);
+  margin-bottom: -10rem;
+}
+
+.heading h3{
+  font-size: 5rem;
+  color:var(--black);
+  margin-top: 4rem;
+}
+
+
+ .food{
+  background-color: transparent;
+}
+
+.food .slide{
+  text-align: center;
+  padding:4rem 2rem;
+  border-radius: .5rem;
+  opacity: .5;
+  transform: scale(.9);
+  margin-bottom: 4rem;
+  cursor: pointer;
+  
+}
+
+.swiper-pagination-bullet-active{
+  background: var(--lgold);
+
+}
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+  bottom:0;
+}
+
+.food .swiper-slide-active{
+  transform: scale(1);
+  opacity: 1;
+  background: var(--white);
+  box-shadow: var(--box-shadow);
+  border:var(--border);
+  opacity: 1;}
+
+.food .slide img{
+  height: 25rem;
+  margin-bottom: 1rem;
+}
+
+.food .slide h3{
+  font-size: 4rem;
+  padding:1rem 0;
+  color:var(--black);
+}
+
+.food .slide .price{
+  font-size: 3rem;
+  color:var(--darkgold);
+}
+
+
+/* drinks section design  */
+
+.heading{
+  text-align: center;
+  margin-bottom: 10rem;
+}
+
+.heading span{
+  font-size: 3.5rem;
+  color:var(--darkgold);
+  margin-top: 1rem;
+}
+
+.heading h3{
+  font-size: 5rem;
+  color:var(--black);
+  margin-top: 1rem;
+}
+
+
+.drinks{
+  background-color: transparent;
+}
+
+.drinks .slide{
+  text-align: center;
+  padding:4rem 2rem;
+  border-radius: .5rem;
+  opacity: .5;
+  transform: scale(.9);
+  margin-bottom: 4rem;
+  cursor: pointer;
+  
+}
+
+.swiper-pagination-bullet-active{
+  background: var(--lgold);
+
+}
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+  bottom:0;
+}
+
+.drinks .swiper-slide-active{
+  transform: scale(1);
+  opacity: 1; 
+  background: var(--white);
+  box-shadow: var(--box-shadow);
+  border:var(--border);
+  opacity: 1;}
+
+.drinks .slide img{
+  height: 25rem;
+  margin-bottom: 1rem;
+}
+
+.drinks .slide h3{
+  font-size: 4rem;
+  padding:1rem 0;
+  color:var(--black);
+}
+
+.drinks .slide .price{
+  font-size: 3rem;
+  color:var(--darkgold);
+}
+
+.drinks-preview-container{
+  background: var(--black);
+  position: fixed;
+  top:0; left:0;
+  height: 100%;
+  width: 100%;
+  z-index: 1100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.drinks-preview-container .drinks-preview{
+  text-align: center;
+  background: var(--white);
+  padding:3rem 2rem;
+  border-radius: .5rem;
+  display: none;
+  width: 35rem;
+}
+
+.drinks-preview-container .drinks-preview.active{
+  display: inline-block;
+  animation:fadeIn 0.4s cubic-bezier(.54,1.3,.63,1.34) backwards;
+}
+
+.drinks-preview-container .drinks-preview img{
+  height: 25rem;
+  margin-bottom: 1rem;
+}
+
+.drinks-preview-container .drinks-preview h3{
+  padding:1rem 0;
+  font-size: 2.5rem;
+  color:var(--black);
+}
+
+.drinks-preview-container .drinks-preview .stars{
+  margin-top: .5rem;
+}
+
+.drinks-preview-container .drinks-preview .stars i{
+  font-size: 1.7rem;
+  color:var(--lwhite);
+}
+
+.drinks-preview-container .drinks-preview p{
+  font-size: 1.6rem;
+  color:var(--light-black);
+  padding:1rem 0;
+  line-height: 2;
+}
+
+.drinks-preview-container .drinks-preview .price{
+  font-size: 50rem;
+  color:var(--black);
+  margin-bottom: .5rem;
+}
+
+
+/* loader section design starts here  */
+.loader-container{
+  position: fixed;
+  top:0; left:0;
+  z-index: 10000;
+  background:#fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:100%;
+  width:100%;
+}
+
+.loader-container.fade-out{
+  top:-120%;
+}
+
+
+/* loader section design ends here  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* media queries for responsive pages*/
 
 /*maxxxx*/
-@media (max-width:1464px){
+@media (max-width:1300px){
   html{
     font-size: 45%;
   }
   .header{
     padding: 1.3rem 3rem;
   }
+  h1 {
+    text-transform: uppercase;
+    font-size: 85px;
+    color: var(--white);
+    font-family: Abril fatface, sans-serif;
+    margin-right: 25%;
+  }
 }
 
 /*mediummmm*/
-@media (max-width:1355px){
+@media (max-width:768px){
   #menu-bar{
     display: inline-block;
 
   }
+
   .header .navbar{
     position: absolute;
     top: 100%;
@@ -297,6 +685,14 @@ h1 span {
     background-color: var(--white);
     height: 80vh;
   }
+  #menu-btn{
+    display: inline-block;
+ }
+
+  .menu .slide .box-container .box{
+    flex-flow: column;
+    text-align: center;
+ }
   .header .navbar.active{
     right: 0;
   }
@@ -308,7 +704,7 @@ h1 span {
   }
   h1 {
     text-transform: uppercase;
-    font-size: 80px;
+    font-size: 70px;
     color: var(--white);
     font-family: Abril fatface, sans-serif;
   }
@@ -327,7 +723,7 @@ h1 span {
   }
 }
 /*smaalll shiiit*/
-@media (max-width:919px){
+@media (max-width:450px){
   html{
     font-size: 40%;
   }
@@ -336,30 +732,7 @@ h1 span {
     font-size: 65px;
     color: var(--white);
     font-family: Abril fatface, sans-serif;
+    margin-right: 25%;
   }
-  .btn-first {
-    border: 2px solid var(--gold);
-    outline: none;
-    background: transparent;
-    font-size: 15px;
-    padding: 10px;
-    width: 280px;
-    color: var(--white);
-    cursor: pointer;
-    display: none;
-  }
-  .btn-first:nth-child(1){
-    margin-right: 15px;
-    display: none;
-  }
+
 }
-@media (max-width:693px){
-  html{
-    font-size: 40%;
-  }
-  h1 {
-    text-transform: uppercase;
-    font-size: 55px;
-    color: var(--white);
-    font-family: Abril fatface, sans-serif;
-  }}

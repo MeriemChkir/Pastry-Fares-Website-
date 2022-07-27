@@ -34,3 +34,76 @@ window.addEventListener('load', () => {
 
     TL.play();
 })
+
+// swiper food section 
+
+ var swiper = new Swiper(".Gateaux-slider", {
+    slidesPerView: 3,
+    spaceBetween: 10,
+    pagination: {
+      clickable: true,
+    },
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+          },
+        700: {
+            slidesPerView: 2,
+          },
+        1000: {
+            slidesPerView: 3,
+          },
+    },
+  });
+
+  // swiper cakes section 
+  var swiper = new Swiper(".food-slider", {
+    slidesPerView: 3,
+    spaceBetween: 10,
+    pagination: {
+      clickable: true,
+    },
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+          },
+        700: {
+            slidesPerView: 2,
+          },
+        1000: {
+            slidesPerView: 3,
+          },
+    },
+  });
+
+ 
+  // swiper drinks section 
+  var swiper = new Swiper(".drinks-slider", {
+    slidesPerView: 3,
+    spaceBetween: 10,
+    pagination: {
+      
+      clickable: true,
+    },
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+          },
+        700: {
+            slidesPerView: 2,
+          },
+        1000: {
+            slidesPerView: 3,
+          },
+    },
+  });
+
+  function loader(){
+    document.querySelector('.loader-container').classList.add('fade-out');
+  }
+  
+  function fadeOut(){
+    setInterval(loader, 3000);
+  }
+  
+  window.onload = fadeOut();

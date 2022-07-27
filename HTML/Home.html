@@ -10,6 +10,7 @@
     <!--cdn font awesome css icons link-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
 </head>
 <body>
     <!--header starts-->
@@ -20,9 +21,9 @@
         </div>
         <!--navbar-->
         <nav class="navbar">
-            <a href="#Accueil">Accueil</a>
-            <a href="#Menu">Menu</a>
-            <a href="#About">A propos</a>
+            <a href="#home">Accueil</a>
+            <a href="Menu ff.html">Menu</a>
+            <a href="#about">A propos</a>
             <a href="#Review">Avis</a>
             <a href="#Contact">Contact</a>
         </nav>
@@ -42,11 +43,6 @@
     <!--Home Section starteeed-->
 
         <Section class="home" id="home">
-            <div class="homecontent">
-                <div class="home-button">
-                    <a href="#"><button>plus</button></a>
-                </div>
-            </div>
 
         <!--Text section-->
         <div class="lignes">
@@ -57,8 +53,8 @@
         <div class="container-first">
             <h1><span>LE </span><span>plaisir </span> <span>de</span> <span>savourer!</span></h1>
             <div class="container-btns">
-                <button class="btn-first b1">Menu</button>
-                <button class="btn-first b2">A propos de nous</button>
+                <a href="Menu ff.html"><button class="btn-first b1">Menu</button></a>
+                <a href="#about"><button class="btn-first b2">A propos de nous</button></a>
             </div>
         </div>
     
@@ -66,9 +62,9 @@
     
     
         <ul class="medias">
-            <li class="bulle"><img src="../images/fb logo.png" class="logo-medias"></li>
-            <li class="bulle"><img src="../images/insta logo.png" class="logo-medias"></li>
-            <li class="bulle"><img src="../images/youtube logo.png" class="logo-medias"></li>
+            <a href="https://www.facebook.com/patisserie.Fares"><li class="bulle"><img src="../images/fb logo.png" class="logo-medias"></li></a>
+            <a href="https://www.instagram.com/patisseriefares/?hl=en"><li class="bulle"><img src="../images/insta logo.png" class="logo-medias"></li></a>
+            <a href="patisseriefaress@planet.tn"><li class="bulle"><img src="../images/mail logo.png " class="logo-medias"></li></a>
         </ul>
     
     
@@ -87,10 +83,10 @@
     </div>
  
     <div class="content">
-       <h3 class="title">Vous etes les bienvenus!</h3>
+       <h3 class="title">vous êtes les bienvenus!</h3>
        <p>
         Bienvenue sur le nouveau portail de la PATISSERIE FARES fondée en 1982 à Ksar Hellal. Médaille d’or de l’artisan pâtissier en 2013.</p>
-       <a href="#" class="btn">Savoir plus</a>
+       <a href="#about" class="btn">Savoir plus</a>
        <div class="icons-container">
           <div class="icons">
              <img src="../images/about-icon-1.png" alt="">
@@ -108,36 +104,188 @@
     </div>
  
  </section>
+<!--About section ennnnnnnds-->
+
+<!-- nouveautés section staaarts -->
+
+<section class="Gateaux" id="Gateaux">
+
+    <div class="heading">  
+        <!-- gateaux section starts  -->
+       <span>Nouveautés Gateaux</span>
+       <h3>Nos délicieux Gateaux</h3>
+    </div>
+ 
+   <div class="swiper-container Gateaux-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide" data-name="cake-1">
+             <img src="../images/cake1.png" alt="">
+             <h3>Foret noire</h3>
+             <div class="price">4.5dt</div>
+          </div>
+ 
+          <div class="swiper-slide slide" data-name="cake-2">
+             <img src="../images/cake3.png" alt="">
+             <h3>Gateau aux fraises</h3>
+             <div class="price">4.5dt</div>
+          </div>
+ 
+          <div class="swiper-slide slide" data-name="cake-3">
+             <img src="../images/cake4.png" alt="">
+             <h3>Gateau aux framboises</h3>
+             <div class="price">4.5dt</div>
+          </div>
+ 
+          <div class="swiper-slide slide" data-name="cake-4">
+             <img src="../images/cake2.png" alt="">
+             <h3>Gateau aux amandes</h3>
+             <div class="price">6dt</div>
+          </div>
+ 
+          <div class="swiper-slide slide" data-name="cake-5">
+             <img src="../images/cake5.png" alt="">
+             <h3>Cheese-Cake</h3>
+             <div class="price">4.5dt</div>
+          </div>
+ 
+       </div>
+ 
+       <div class="swiper-pagination"></div>
+ 
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</section>
+<!-- gateaux section ends  -->
 
 
 
 
+<!-- fast-food section starts  -->
+
+<section class="food" id="food"> 
+
+    <div class="heading">  
+       <span>Nouveautés Fast-food</span>
+       <h3>Nos Fast-food</h3>
+    </div>
+ 
+    <div class="swiper-container food-slider">
+ 
+       <div class="swiper-wrapper">
+ 
+          <div class="swiper-slide slide" data-name="food-1">
+             <img src="../images/burger.png" alt="">
+             <h3>Hamburger</h3>
+             <div class="price">10dt</div>
+          </div>
+ 
+          <div class="swiper-slide slide" data-name="food-2">
+             <img src="../images/pizza.png" alt="">
+             <h3>Pizza</h3>
+             <div class="price">15dt</div>
+          </div>
+ 
+          <div class="swiper-slide slide" data-name="food-3">
+             <img src="../images/calzone.png" alt="">
+             <h3>Calzone</h3>
+             <div class="price">10dt</div>
+          </div>
+ 
+          <div class="swiper-slide slide" data-name="food-4">
+             <img src="../images/tacos.png" alt="">
+             <h3>Tacos</h3>
+             <div class="price">9dt</div>
+          </div>
+ 
+          <div class="swiper-slide slide" data-name="food-5">
+             <img src="../images/burger.png" alt="">
+             <h3>Cheese Burger</h3>
+             <div class="price">15dt</div>
+          </div>
+ 
+       </div>
+ 
+       <div class="swiper-pagination"></div>
+ 
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</section>
 
 
 
+<!-- fast-food section ends  -->
 
 
+<!-- drinks section starts  -->
 
+<section class="drinks" id="drinks"> 
 
+   <div class="heading">  
+      <span>Nouveautés Boissons</span>
+      <h3>Nos Boissons</h3>
+   </div>
 
+   <div class="swiper-container drinks-slider">
 
+      <div class="swiper-wrapper">
 
+         <div class="swiper-slide slide" data-name="drink-1">
+            <img src="../images/drink1.png" alt="">
+            <h3>Jus d'orange</h3>
+            <div class="price">10dt</div>
+         </div>
 
+         <div class="swiper-slide slide" data-name="drink-2">
+            <img src="../images/drink2.png" alt="">
+            <h3>Café crème</h3>
+            <div class="price">15dt</div>
+         </div>
 
+         <div class="swiper-slide slide" data-name="drink-3">
+            <img src="../images/drink3.png" alt="">
+            <h3>Iced Coffee</h3>
+            <div class="price">10dt</div>
+         </div>
 
+         <div class="swiper-slide slide" data-name="drink-4">
+            <img src="../images/drink4.png" alt="">
+            <h3>Mojito</h3>
+            <div class="price">9dt</div>
+         </div>
 
+         <div class="swiper-slide slide" data-name="drink-5">
+            <img src="../images/drink5.png" alt="">
+            <h3>Limonade</h3>
+            <div class="price">15dt</div>
+         </div>
 
+         <div class="swiper-slide slide" data-name="drink-6">
+            <img src="../images/drink6.png" alt="">
+            <h3>Jus de Fraise</h3>
+            <div class="price">15dt</div>
+         </div>
 
+      </div>
 
+      <div class="swiper-pagination"></div>
 
-
-
-
-
-
+   </div>
+   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</section>
+<!-- drinks section ends  -->
 <!--about section ends-->
-    
-    <!--JavaScript-->
+
+
+
+<!-- Loader section starts here  -->
+<div class="loader-container">
+   <img src="../images/loader.gif" alt="">
+</div>
+<!-- Loader section ends here  -->
+
+
+
+<!--JavaScript-->
     <script src="../JS/index.js"></script>
 </body>
 </html>
